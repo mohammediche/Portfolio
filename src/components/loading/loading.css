@@ -1,0 +1,81 @@
+/*----------- Main Style ------*/
+
+.containerLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: loading 3s ease-in forwards;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.loader-shap {
+  width: 2rem;
+  height: 2rem;
+  background-color: #35d0ff;
+  margin: 1rem;
+  border-radius: 50%;
+  animation: load_shap 1.2s ease infinite;
+}
+
+.loader-shap:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.loader-shap:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.loader-shap:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes load_shap {
+  50% {
+    transform: translateY(-50%);
+    border-bottom: 16px solid #292929;
+    box-shadow: 0 8rem 2rem #35d0ff54;
+  }
+}
+/*----------- End Main Style ------*/
+/* ======= Datlearn ======= */
+.datlearn {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  font-family: cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: #fff;
+  visibility: hidden;
+}
