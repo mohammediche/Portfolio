@@ -13,7 +13,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  animation: loading 3s ease-in forwards;
+  animation: loading 2s ease-in forwards;
 }
 
 .loader {

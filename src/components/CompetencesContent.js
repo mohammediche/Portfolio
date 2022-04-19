@@ -1,5 +1,5 @@
-import Nav from "../components/Nav";
-import ProgressBarre from "../components/ProgressBarre";
+import React from "react";
+import ProgressBarre from "./ProgressBarre";
 import { GiKimono, GiSoccerBall, GiConsoleController } from "react-icons/gi";
 import {
   IoLogoJavascript,
@@ -10,23 +10,10 @@ import { AiFillHtml5 } from "react-icons/ai";
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { IoMdRadioButtonOff } from "react-icons/io";
 
-const Competences = () => {
+const CompetencesContent = () => {
   return (
-    <div id="competencesPage">
-      <ul className="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <Nav />
-      <div className="competencesContent">
+    <div>
+      <div className="area competencesContent">
         <section className="section fristSection">
           <div>
             <h2>Expérience</h2>
@@ -46,10 +33,11 @@ const Competences = () => {
                 <li>Prise de responsabilité des différentes décisions.</li>
               </ul>
             </div>
+    
             {/******** expériences Formation **********/}
             <div style={{ marginTop: "18px" }}>
               <div>
-                <span>Formation - OpenClassrooms </span>
+                <span>Projets professionnels </span>
                 <span>2021/2022</span>
               </div>
               <ul className="exeperiencesAlternance">
@@ -69,8 +57,13 @@ const Competences = () => {
             <h3>Développeur Web - OpenClassrooms</h3>
             <span>2021/2022</span>
             <p>certificat niveau 5 (bac+2)</p>
+
+            <h3>Baccalauréat technologique STI2D</h3>
+            <span>2018/2019</span>
+            <p>sciences et technologies de l'industrie et du développement durable, spécialité EE ( énergie & environnement)</p>
           </div>
         </section>
+        <hr  className="onlyMobile"/>
         {/******** Hard skills ********/}
         <section className="section secondSection">
           <h2>Hard Skills</h2>
@@ -91,12 +84,13 @@ const Competences = () => {
             <IoLogoJavascript />
             JAVASCRIPT - REACT
           </span>
-          <ProgressBarre done="50" />
+          <ProgressBarre done="65" />
 
           <h3>Back-end :</h3>
           <span> NODE JS - EXPRESS</span>
-          <ProgressBarre done="65" />
+          <ProgressBarre done="50" />
         </section>
+        <hr  className="onlyMobile"/>
         {/******** Centre d'intéret ********/}
         <section className="section thirdSection">
           <h2>Centre d'intérêt</h2>
@@ -107,16 +101,17 @@ const Competences = () => {
             <span>
               <GiSoccerBall /> Football
             </span>
-            <span>
-              <GiConsoleController />
-              Jeux vidéos
-            </span>
-            <span>
+            <span> 
               <MdOutlineTravelExplore />
               Voyage
             </span>
+            <span>
+            <GiConsoleController />
+              Jeux vidéos
+            </span>
           </div>
         </section>
+        <hr  className="onlyMobile"/>
         {/******** Autres compétences ********/}
         <section className="section fourthSection">
           <h2>Autres compétences</h2>
@@ -132,7 +127,7 @@ const Competences = () => {
             <span>Wordpress</span>
             <div>
               <IoIosRadioButtonOn />
-              <IoMdRadioButtonOff />
+              <IoIosRadioButtonOn />
               <IoMdRadioButtonOff />
               <IoMdRadioButtonOff />
               <IoMdRadioButtonOff />
@@ -179,10 +174,11 @@ const Competences = () => {
         <section className="section fiveSection">
           <h2>Soft Skills</h2>
           <div>
-            <span style={{ padding: "5px" }}>Altruiste</span>
-            <span style={{ padding: "5px" }}>Optimiste</span>
-            <span style={{ padding: "5px" }}>Autonome</span>
+            <span style={{ padding: "5px" }}>Sens de l'organisation</span>
+            <span style={{ padding: "5px" }}>Rigoureux</span>
+            <span style={{ padding: "5px" }}>Collaboratif</span>
             <span style={{ padding: "5px" }}>Curieux</span>
+            <span style={{ padding: "5px" }}>Adaptatif</span>
           </div>
         </section>
       </div>
@@ -190,4 +186,4 @@ const Competences = () => {
   );
 };
 
-export default Competences;
+export default CompetencesContent;

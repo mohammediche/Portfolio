@@ -1,0 +1,103 @@
+@media screen and (max-width: 1180px) {
+  #homePage {
+    display: block;
+  }
+  .ComponentNavigation {
+    position: relative;
+    width: 100%;
+    padding: 10px 0px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    background: transparent;
+  }
+  /*****  La navigation  ******/
+  .categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .categories a {
+    padding: 15px 30px;
+  }
+  /* Image de profil */
+  .profilImage {
+    width: 75px;
+    height: 75px;
+  }
+
+  .spanNavigation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .categories {
+    display: block;
+  }
+  .barresDeNavigationMobile{
+    display: block;
+    position: absolute;
+    top: 42px;
+    right: 25px;
+    cursor: pointer;
+  }
+  .hide .categories{
+    display: none;
+  }
+  .open .categories{
+    display: block;
+    overflow: hidden;
+  }
+
+  .open .categories li{
+    animation: slideLi .5s ease-in-out forwards;
+  }
+  .open .barresDeNavigationMobile .trait1 {
+    transform: rotate(-45deg) translate(-10px, 4px);
+  
+}
+.open .barresDeNavigationMobile .trait2{
+    opacity: 0;
+}
+.open .barresDeNavigationMobile .trait3{
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+/**** fin de la navigation ****/
+
+.competencesContent,
+.autresCompetences{
+  height: auto;
+  display: block;
+}
+.onlyMobile {
+  display: block;
+  opacity: 0.4;
+} 
+/******  fin pour la section competences *********/
+.portfolioContent{
+  height: auto;
+}
+.MesProjets{
+  margin: 20px;
+  width: 350px;
+}
+
+
+
+}
+
+
+
+@keyframes slideLi {
+  0%{
+      transform: translateX(-200px); 
+      opacity: 0;
+  }
+  100%{
+      transform: translateX(0px); 
+      opacity: 1;
+  }
+}
+

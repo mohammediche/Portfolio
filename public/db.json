@@ -1,0 +1,43 @@
+{
+    "projets": [
+        {
+            "id": 1,
+            "title": "Groupomania",
+            "image": "../media/groupomania.png",
+            "description": "Développement fullstack d'un réseau social d'entreprise"
+        },
+        {
+            "id": 2,
+            "title": "Piquante",
+            "image": "../media/Piquante.png",
+            "description": " réalisation du backend d'une application d'avis gastronomique"
+        },
+        {
+            "id": 3,
+            "title": "Orinoco",
+            "image": "../media/orinoco.png",
+            "description": "Développement du front-end d'un site e-commerce"
+        },
+        {
+            "id": 4,
+            "title": "La chouette agence",
+            "image": "../media/chouetteAgence.png",
+            "description": " Optimisation du référencement SEO d'un site web existant",
+            "website": "https://mohammediche.github.io/La-chouette-agence/"
+        },
+        {
+            "id": 5,
+            "title": "Ohmyfood",
+            "image": "../media/OhMyFood.png",
+            "description": "Dynamisation d'un site web avec des Animation css avancées",
+            "website": "https://mohammediche.github.io/OhMyFood/"
+        },
+        {
+            "id": 6,
+            "title": "Reservia",
+            "image": "../media/reservia.png",
+            "description": "Réalisation d'une Maquette HTML / CSS",
+            "website": "https://mohammediche.github.io/reservia/"
+        }
+    ]
+}

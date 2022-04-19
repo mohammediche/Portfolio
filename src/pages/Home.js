@@ -1,35 +1,29 @@
 import React from "react";
+import HomeContent from "../components/HomeContent";
+import CompetencesContent from "../components/CompetencesContent";
+import PortfolioContent from "../components/PortfolioContent";
+import ContactContent from "../components/ContactContent";
+
 import Nav from "../components/Nav";
 
 const Home = () => {
   return (
     <div id="homePage">
-      <ul className="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
       <Nav />
-      <div className="homeContent">
-        <div className="profil">
-          <h1>Mohammed Iche</h1>
-          <h2>Développeur web</h2>
-          <a
-            className="downloadCV hvr-sweep-to-right"
-            href="../media/cv_Iche_Mohammed_Developpeur-web.pdf"
-            download="cv_Mohammed_Developpeur_Web"
-          >
-            Télécharger CV
-          </a>
+      <main className="allContent">
+        <div id="home">
+          <HomeContent />
         </div>
-      </div>
+        <div id="competences">
+          <CompetencesContent />
+        </div>
+        <div id="portfolio">
+          <PortfolioContent />
+        </div>
+        <div id="contact">
+          <ContactContent />
+        </div>
+      </main>
     </div>
   );
 };

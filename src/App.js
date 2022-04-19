@@ -2,11 +2,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Competences from "./pages/Competences";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
 import "./style.css";
-import Projet from "./pages/Projet/Projet";
+import "./mediaQuery.css";
 import Loading from "./components/loading/Loading";
 
 const App = () => {
@@ -29,10 +26,7 @@ const App = () => {
         <Routes>
           <>
             <Route path="/" element={<Home />} />
-            <Route path="/competences" element={<Competences />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/portfolio/:idProjet" element={<Projet />} />
-            <Route path="/contact" element={<Contact />} />
+     
           </>
         </Routes>
       </BrowserRouter>

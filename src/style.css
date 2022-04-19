@@ -1,29 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-/* html {
+
+html {
   scroll-behavior: smooth;
-} */
+}
+
 body {
-  background-color: #121212; /*#000000eb*/
+  background-color: #121212;
+  /*#000000eb*/
   color: #fff;
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 1px;
 }
+
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
 
+#homePage {
+  display: flex;
+  justify-content: center;
+  height: 615px;
+  /*725px pour prendre la quasi de la page, à réflechir*/
+  margin: 5%;
+  border-radius: 20px;
+
+}
+
 /* Navigation */
 .ComponentNavigation {
-  width: 300px;
+  width: 380px;
   background: rgb(0 0 0 / 54%);
   margin-right: 1%;
   padding: 20px 10px;
@@ -31,6 +47,7 @@ a {
   border-radius: 20px;
   z-index: 1;
 }
+
 .profilImage {
   width: 150px;
   border-radius: 50%;
@@ -39,6 +56,7 @@ a {
   height: 150px;
   object-fit: cover;
 }
+
 .imageAndName {
   display: flex;
   flex-direction: column;
@@ -47,72 +65,95 @@ a {
 }
 
 .categories li {
-  padding: 20px 30px;
+  /* padding: 20px 30px; */
   color: #34d0ff;
   display: flex;
 }
+
 .categories li svg {
   color: #34d0ff;
 }
+
 .categories a {
   color: #34d0ff;
-  padding-left: 9px;
-  padding-right: 9px;
-  margin-left: 20px;
+  padding: 20px 10px 20px 55px;
+  width: 100%;
+  text-align: start;
 }
+
 .categories li:hover {
   background-color: #266282;
 }
+
 .categories li:hover svg {
   color: #fff;
 }
+
 .categories li:hover .navLink {
   color: #fff;
 }
-.active {
-  color: #fff !important;
-  border-right: 2px solid #35d0ff;
-  border-radius: 13%;
-  border-left: 2px solid #35d0ff;
-  transition: 500ms;
-}
-/*icons github facebook etc...*/
-.socialMedia {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 20px 0;
-}
-.socialMedia a {
-  display: flex;
-  font-size: 22px;
-  background: #1db7fc;
-  color: #000;
-  padding: 5px 5px;
-  border-radius: 20px;
-  margin: 0 8px;
-  transition: 200ms;
-}
-.socialMedia a:hover {
-  background-color: #189ddb;
-  transform: scale(1.2);
+
+/***************************  la navigation mobile  *****************************/
+
+.traits {
+  border-bottom: 2px solid #fff;
+  width: 30px;
+  padding: 4px;
+  transition: 300ms;
 }
 
-/* HOME PAGE*/
-#homePage,
-#competencesPage,
-#portfolioPage,
-#contactPage {
-  display: flex;
-  justify-content: center;
-  height: 650px; /*725px pour prendre la quasi de la page, à réflechir*/
-  margin: 5%;
-  border-radius: 20px;
+.barresDeNavigationMobile {
+  display: none;
 }
+
+.open .categories li:nth-child(1) {
+  /* animation-delay: 200ms; */
+  transform: translateX(-200px);
+}
+
+.open .categories li:nth-child(2) {
+  animation-delay: 150ms;
+  transform: translateX(-200px);
+
+}
+
+.open .categories li:nth-child(3) {
+  animation-delay: 300ms;
+  transform: translateX(-200px);
+
+}
+
+.open .categories li:nth-child(4) {
+  animation-delay: 450ms;
+  transform: translateX(-200px);
+
+}
+
+/************************ fin de la navigation mobile *****************************/
+
+.spanNavigation {
+  font-size: 12px;
+  justify-content: center;
+  margin-top: 110px;
+}
+
+/*All content */
+.allContent {
+  z-index: 1;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.area {
+  margin-bottom: 50px;
+}
+
+/*************************** HOME PAGE******************************/
 
 .homeContent {
   position: relative;
-  width: 70%;
+  width: 100%;
+  height: 615px;
   background: linear-gradient(115deg, #080808e3 65%, transparent 100%);
   overflow: hidden;
   border-radius: 20px;
@@ -120,27 +161,33 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .homeContent::after {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  background: url("./media/work.jpeg") no-repeat center/cover; /* https://www.presse-citron.net/app/uploads/2019/11/test-call-of-duty-modern-warfare.jpg*/
+  background: url("./media/work.jpeg") no-repeat center/cover;
+  /* https://www.presse-citron.net/app/uploads/2019/11/test-call-of-duty-modern-warfare.jpg*/
   z-index: -1;
   filter: brightness(0.8);
 }
+
 .profil {
   position: absolute;
   z-index: 1;
   padding: 50px 35px;
 }
+
 .profil h1 {
   font-size: 60px;
 }
+
 .profil h2 {
   font-size: 30px;
   margin-bottom: 40px;
 }
+
 .downloadCV {
   color: #fff;
   border: 2px solid #fff;
@@ -154,6 +201,7 @@ a {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
 }
+
 .hvr-sweep-to-right:before {
   content: "";
   position: absolute;
@@ -167,14 +215,17 @@ a {
   transform-origin: 0 50%;
   transition: 0.3s ease-out;
 }
+
 .hvr-sweep-to-right:hover {
   border: 2px solid #1db7fc;
   color: #fff;
 }
+
 .hvr-sweep-to-right:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
 /*petite animation pour icon du bouton voir le projet*/
 .hvr-sweep-to-right:hover svg {
   animation: linear 0.4s infinite alternate goToProject;
@@ -183,7 +234,8 @@ a {
 /*********** PAGE COMPÉTENCES ************/
 
 .competencesContent {
-  width: 70%;
+  width: 100%;
+  /* height: 615px; */
   background: linear-gradient(115deg, #100f21eb 50%, #0000004f 100%);
   border-radius: 20px;
   display: grid;
@@ -193,6 +245,7 @@ a {
   padding: 10px;
   z-index: 1;
 }
+
 .section {
   padding: 10px;
   box-shadow: rgb(56 56 56) 3px 3px 6px 0px inset,
@@ -201,20 +254,24 @@ a {
   flex-direction: column;
   line-height: 1.5;
 }
+
 .section p,
 span {
   font-size: 12px;
   display: flex;
   align-items: center;
 }
+
 .secondSection svg {
   font-size: 18px;
 }
+
 .section h2 {
   line-height: 2;
   font-size: 20px;
   color: #1db7fc;
 }
+
 .section h3 {
   font-size: 16px;
   color: #1db7fc;
@@ -223,15 +280,13 @@ span {
 .fristSection {
   grid-column: 1/3;
 }
-.fourthSection {
-  /* grid-column: 2/4; */
-  padding: 0 10px;
-}
+
 .interets {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
+
 .interets span {
   padding: 5px 0;
 }
@@ -241,21 +296,30 @@ span {
   background: #efd81d;
   color: black;
 }
+
 .logoHtml svg {
   color: #dc4924;
 }
+
 .logoCss svg {
   color: rgb(63 130 237);
 }
+
 .section span svg {
   margin-right: 8px;
 }
+
 .exeperiencesAlternance {
   padding-left: 25px;
 }
+
 .exeperiencesAlternance li {
   list-style: disc;
   font-size: 13px;
+}
+
+.onlyMobile {
+  display: none;
 }
 
 /*Progression animation*/
@@ -268,6 +332,7 @@ span {
   border: 1px solid #616161ad;
   background: #141328;
 }
+
 .progressDone {
   background: linear-gradient(to left, #f2709c, #ff9472);
   box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
@@ -287,13 +352,15 @@ span {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 .autresCompetences svg {
   color: #1fc5c5;
 }
 
 /**********************************  Page Portfolio  *****************************************/
 .portfolioContent {
-  width: 70%;
+  width: 100%;
+  height: 615px;
   background: linear-gradient(115deg, #100f21eb 50%, #0000004f 100%);
   background: black;
   border-radius: 20px;
@@ -301,6 +368,7 @@ span {
   z-index: 1;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -309,11 +377,13 @@ span {
   height: 100%;
   transition: 500ms;
 }
+
 .MesProjets {
-  width: 33%;
+  width: 270px;
   display: flex;
   justify-content: center;
 }
+
 .enteteCardProjet {
   position: absolute;
   display: flex;
@@ -324,39 +394,37 @@ span {
   text-align: center;
   z-index: 1;
   transition: 800ms;
-  padding-top: 50px;
+  padding-top: 40px;
   background: #0c384e;
   /* color: gold; */
   color: #fff;
-  padding-bottom: 70px;
-  transform: translateY(-270px);
+  padding-bottom: 77px;
+  transform: translateY(-290px);
 }
+
 .projet:hover .enteteCardProjet {
   transform: translateY(-0);
 }
+
 .projet {
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 230px;
   overflow: hidden;
   border-radius: 8px;
   transition: 200ms;
 }
+
 .projet:hover {
-  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c; /* lightseagreen */
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  /* lightseagreen */
 }
+
 .projet:hover .imageProjet {
   transform: scale(1.2);
 }
 
-/* .displayNone {
-  display: none;
-} */
-/* .projet:hover .displayNone {
-  display: flex;
-  align-items: center;
-} */
-.displayNone svg {
+.cardContent svg {
   font-size: 14px;
   margin-left: 5px;
 }
@@ -380,16 +448,19 @@ span {
 .voirLeProjet::before {
   background: lightseagreen !important;
 }
+
 .voirLeProjet:hover {
   border-color: lightseagreen !important;
 }
+
 /*Fin*/
 
 /**********************************  CONTACT PAGE  ********************************/
 .contactContent {
   position: relative;
-  width: 70%;
-  background: #080808e3;
+  width: 100%;
+  height: 615px;
+  background: #080808cc;
   overflow: hidden;
   border-radius: 20px;
   display: flex;
@@ -397,104 +468,58 @@ span {
   justify-content: space-around;
   padding: 10px;
 }
+
 .contactContent::after {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  background: url("./media/contact.jpeg") no-repeat center/cover; /* https://www.presse-citron.net/app/uploads/2019/11/test-call-of-duty-modern-warfare.jpg*/
+  background: url("./media/contact.jpeg") no-repeat center/cover;
+  /* https://www.presse-citron.net/app/uploads/2019/11/test-call-of-duty-modern-warfare.jpg*/
   z-index: -1;
 }
 
 .contactContent h1 {
   text-align: center;
-  font-size: 57px;
-  margin-bottom: 200px;
+  font-size: 70px;
+  margin-bottom: 80px;
 }
+
 .contactWM {
-  font-size: 16px;
-  padding: 10px;
   cursor: pointer;
   color: #fff;
-  display: flex;
-  align-items: center;
-  margin: 8px 0 0 0;
   border: none;
   background: transparent;
-  text-decoration: underline;
+
 }
-.contactWM svg {
-  margin-right: 8px;
-  font-size: 22px;
-}
+
 .contactWM:hover {
   text-decoration-color: #148bc2;
 }
 
-.contactContent form {
-  display: flex;
-  flex-direction: column;
-  width: 47%;
-}
-
-.contactContent form input,
-.textareaContact {
-  font-size: 16px;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 4px 12px;
-  line-height: 1.4;
-  letter-spacing: 1px;
-}
-.contactContent form input {
-  margin: 5px 0;
-}
-
-.textareaContact {
-  resize: none;
-  margin: 10px 0;
-}
-.submit {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 5px 0;
-  background: #148bc2;
-  color: #fff;
-  border: none;
-  overflow: hidden;
+.socialMedia,
+.contactWM svg {
+  font-size: 50px;
   cursor: pointer;
-  transition: 200ms;
-}
-.submit:hover {
-  background: #1077a7;
-}
-.submit span {
-  padding-top: 14px;
-  transition: 300ms;
-}
-.submit svg {
-  transform: translateY(20px);
-  font-size: 18px;
-  transition: 300ms;
-}
-.submit:hover svg {
-  transform: translateY(-12px);
-}
-.submit:hover span {
-  transform: translateY(-25px);
+  color: #fff;
 }
 
-.contactContent form input:focus,
-.textareaContact:focus {
-  outline: none;
-  /* box-shadow: 0px 0px 5px #35d0ff; */
-  border-color: #35d0ff;
+.contactContent svg {
+  background-color: #303130;
+  margin: 30px;
+  padding: 8px;
+  border-radius: 25%;
+  transition: 300ms;
 }
+
+.contactContent svg:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-10px);
+}
+
+
+
 
 /**********************************  ANIMATION BACKGROUND BODY  ********************************/
 .circles {
@@ -605,10 +630,12 @@ span {
     border-radius: 50%;
   }
 }
+
 @keyframes goToProject {
   0% {
     transform: translateX(0px);
   }
+
   100% {
     transform: translateX(2px);
   }

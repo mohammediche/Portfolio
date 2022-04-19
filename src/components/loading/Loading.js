@@ -2,11 +2,11 @@ import "./loading.css";
 
 const loading = () => {
   return (
-    <div class="containerLoading">
-      <div class="loader">
-        <div class="loader-shap"></div>
-        <div class="loader-shap"></div>
-        <div class="loader-shap"></div>
+    <div className="containerLoading">
+      <div className="loader">
+        <div className="loader-shap"></div>
+        <div className="loader-shap"></div>
+        <div className="loader-shap"></div>
       </div>
     </div>
   );
