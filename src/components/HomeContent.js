@@ -9,7 +9,7 @@ const HomeContent = () => {
           <h2>Développeur web</h2>
           <a
             className="downloadCV hvr-sweep-to-right"
-            href="../media/cv_Iche_Mohammed_Developpeur-web.pdf"
+            href="./media/cv_Iche_Mohammed_Developpeur-web.pdf"
             download="cv.Mohammed.Iche.pdf"
           >
             Télécharger CV
