@@ -19,9 +19,9 @@ body {
   letter-spacing: 1px;
 }
 
-li {
+/* li {
   list-style: none;
-}
+} */
 
 a {
   text-decoration: none;
@@ -314,7 +314,7 @@ span {
 }
 
 .exeperiencesAlternance li {
-  list-style: disc;
+  /* list-style: disc; */
   font-size: 13px;
 }
 
