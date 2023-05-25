@@ -81,23 +81,25 @@ const CompetencesContent = () => {
             <AiFillHtml5 />
             HTML
           </span>
-          <ProgressBarre done="90" />
+          <ProgressBarre done="95" />
           <span className="logoCss">
             {" "}
             <IoLogoCss3 />
             CSS
           </span>
-          <ProgressBarre done="90" />
+          <ProgressBarre done="95" />
           <span className="logoJs">
             {" "}
             <IoLogoJavascript />
             JAVASCRIPT - REACT - TYPESCRIPT
           </span>
-          <ProgressBarre done="75" />
+          <ProgressBarre done="80" />
 
           <h3>Back-end :</h3>
           <span> NODE JS - EXPRESS</span>
           <ProgressBarre done="50" />
+          <span> .NET</span>
+          <ProgressBarre done="20" />
         </section>
         <hr className="onlyMobile" />
         {/******** Centre d'intéret ********/}
@@ -125,6 +127,14 @@ const CompetencesContent = () => {
         <section className="section fourthSection">
           <h2>Autres compétences</h2>
           <div className="autresCompetences">
+            <span>Redux/Mobx</span>
+            <div>
+              <IoIosRadioButtonOn />
+              <IoIosRadioButtonOn />
+              <IoIosRadioButtonOn />
+              <IoIosRadioButtonOn />
+              <IoMdRadioButtonOff />
+            </div>
             <span>Git</span>
             <div>
               <IoIosRadioButtonOn />
